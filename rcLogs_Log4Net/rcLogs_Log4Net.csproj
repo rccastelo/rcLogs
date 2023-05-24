@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Log4Mongo.NetStandard" Version="1.1.0" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="log4net.Ext.Json" Version="2.0.10.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.32" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.32" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.32" />
@@ -15,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\rcLog_Base\rcLog_Base.csproj" />
+    <ProjectReference Include="..\rcLogsBase\rcLogsBase.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="serilog.example.config">
+    <None Update="log4net.config.example">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

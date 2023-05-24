@@ -1,0 +1,6 @@
+﻿{
+    "file-log-all": "d:\\informatica\\logs\\default.log",
+    "file-log-important": "d:\\informatica\\logs\\important.log",
+    "mongodb": "mongodb://localhost:27017/rcLog_rcManager",
+    "mongodb-collection": "logs"
+}

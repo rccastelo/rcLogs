@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace rcLog_Base
+namespace rcLogsBase
 {
-    public interface ILogBase
+    public interface ILogsBase
     {
         void LogInfo(string message);
         void LogWarning(string message);

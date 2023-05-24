@@ -1,16 +1,16 @@
-﻿using rcLog_Base;
+﻿using rcLogsBase;
 using System;
 using System.IO;
 
-namespace rcLog_Log4Net
+namespace rcLogs_Log4Net
 {
-    public class Log : ILogBase
+    public class Logs : ILogsBase
     {
         private static readonly log4net.ILog _logger;
 
-        static Log()
+        static Logs()
         {
-            FileInfo fi = Settings.GetSettingsFile();
+            FileInfo fi = Settings.GetFileSettings();
 
             log4net.Config.XmlConfigurator.ConfigureAndWatch(fi);
 

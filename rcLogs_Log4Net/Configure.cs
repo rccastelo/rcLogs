@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using rcLog_Base;
+using rcLogsBase;
 
-namespace rcLog_Serilog
+namespace rcLogs_Log4Net
 {
     public class Configure
     {
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ILogBase, Log>();
+            services.AddSingleton<ILogsBase, Logs>();
         }
     }
 }

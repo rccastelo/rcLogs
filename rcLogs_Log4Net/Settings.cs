@@ -1,20 +1,20 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace rcLog_Serilog
+namespace rcLogs_Log4Net
 {
     public class Settings
     {
-        private static string _configFile = "serilog.config";
+        private static string _configFile = "log4net.config";
 
-        public static FileInfo GetSettingsFile()
+        public static FileInfo GetFileSettings()
         {
             string fileDir = Directory.GetCurrentDirectory() + @"\" + _configFile;
 
-            return GetSettingsFile(fileDir);
+            return GetFileSettings(fileDir);
         }
 
-        public static FileInfo GetSettingsFile(string fileDirectory) 
+        public static FileInfo GetFileSettings(string fileDirectory) 
         {
             FileInfo fi = new FileInfo(fileDirectory);
 
@@ -51,7 +51,12 @@ namespace rcLog_Serilog
             return GetSettings("Settings", key);
         }
 
-        public static string GetConnectionString()
+        public static string GetValue(string key)
+        {
+            return GetSettings().GetValue<string>(key);
+        }
+
+        public static string GetConnectionStringDefault()
         {
             return GetSettings("ConnectionStrings", "DefaultConnection");
         }
